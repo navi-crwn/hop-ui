@@ -34,11 +34,34 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          files=(
-            src/Apps.php
-            src/UiServiceProvider.php
-            tests/Feature/NavTest.php
-          )
-          for file in "${files[@]}"; do
-            php -l "$file"
-          done
+          list_file="$(mktemp "${RUNNER_TEMP}/php-files.XXXXXX")"
+          trap 'rm -f "$list_file"' EXIT
+          if ! git ls-files -z -- '*.php' > "$list_file"; then
+            echo 'Unable to enumerate tracked PHP files.' >&2
+            exit 1
+          fi
+          count=0
+          failures=0
+          while IFS= read -r -d '' file; do
+            case "$file" in
+              *.blade.php|vendor/*|node_modules/*) continue ;;
+            esac
+            count=$((count + 1))
+            if [[ ! -f "$file" ]]; then
+              echo "Tracked PHP file is missing: $file" >&2
+              failures=$((failures + 1))
+              continue
+            fi
+            if ! php -l "$file"; then
+              failures=$((failures + 1))
+            fi
+          done < "$list_file"
+          if (( count == 0 )); then
+            echo 'No tracked plain PHP files found.' >&2
+            exit 1
+          fi
+          printf 'Checked %d tracked plain PHP files.\n' "$count"
+          if (( failures != 0 )); then
+            printf 'PHP syntax lint failed for %d files.\n' "$failures" >&2
+            exit 1
+          fi
