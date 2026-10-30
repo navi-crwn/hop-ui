@@ -1,0 +1,44 @@
+name: Package static checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Assert PHP version
+        run: php -r 'if (PHP_MAJOR_VERSION !== 8 || PHP_MINOR_VERSION !== 3) { fwrite(STDERR, "PHP 8.3 is required.\n"); exit(1); }'
+
+      - name: Validate Composer metadata
+        run: composer validate --strict
+
+      - name: Lint PHP syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=(
+            src/Apps.php
+            src/UiServiceProvider.php
+            tests/Feature/NavTest.php
+          )
+          for file in "${files[@]}"; do
+            php -l "$file"
+          done
