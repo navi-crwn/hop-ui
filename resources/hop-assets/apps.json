@@ -3,8 +3,8 @@
   "base": "https://hel.ink/hop-assets/v1/",
   "assets": {
     "fonts_css": {
-      "url": "https://hel.ink/hop-assets/v1/fonts.css",
-      "integrity": "sha384-T1Y2aaMQ8CSfi7J2t9d1ZAbVcQ1FcO27Jwn3WtNWB+UVK137YCl3hIPvz0G4K22L"
+      "url": "https://hel.ink/hop-assets/v1/fonts-amnesia.css",
+      "integrity": "sha384-750KEkFNx2ykcIsUyi1pZ0JC/Z6jfrK7OJtntqOzB8HKfEpjeostGTWJGAxh/5Zi"
     },
     "float_css": {
       "url": "https://hel.ink/hop-assets/v1/hop-float.css",
