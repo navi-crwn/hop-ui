@@ -85,3 +85,7 @@ In your application's layout file (e.g. `resources/views/layouts/app.blade.php`)
 ## License
 
 The HOP shared packages are open-source software licensed under the [MIT license](LICENSE).
+
+## Languages
+
+Every HOP app ships the same nine languages: English `en`, 简体中文 `zh-CN`, Deutsch `de`, Bahasa Indonesia `id`, 日本語 `ja`, Português (Brasil) `pt-BR`, Español `es`, Français `fr` and Русский `ru`. `Hop\Ui\Locales` is the one list: `Locales::ALL` (native name and short label), `Locales::normalize($stored)` (maps the older `zh` and `pt` to `zh-CN` and `pt-BR`, and anything else, such as the retired `ar`, to English). `<x-hop::language-switcher />` and the footer language row are drawn from it. Right-to-left languages are not part of the set.
