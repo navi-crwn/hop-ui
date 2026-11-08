@@ -12,6 +12,13 @@ test('the family nav lists HOP ID and every other public app with its mark, not 
         ->and(substr_count($html, 'https://hel.ink/hop-assets/'))->toBe(count(Assets::family('biohop')) - 1);
 });
 
+test('an app this one has no SSO start for opens through the hub launcher, never by its bare address', function () {
+    $html = Blade::render('<x-hop::family-nav app="biohop" />');
+    expect($html)->toContain('href="https://hub.hel.ink/apps/filehop"')
+        ->and($html)->not->toContain('href="https://file.hel.ink"')
+        ->and($html)->toContain('href="https://hub.hel.ink/dashboard"');
+});
+
 test('the account menu shows who is signed in and offers account, settings and sign out', function () {
     $user = (object) ['name' => 'Mira Studio', 'email' => 'mira@example.test'];
     $html = Blade::render('<x-hop::account-menu :user="$user" settings-url="/settings" account-url="https://hub.hel.ink/settings" logout-url="/logout" />', ['user' => $user]);
