@@ -82,6 +82,7 @@ return [
 | --- | --- | --- |
 | `<x-hop::fonts />` | 无 | 放在 `<head>` 中：从 hel.ink 加载家族字体（Inter、Instrument Serif 和 JetBrains Mono）。使用 `var(--hop-font-display)`、`var(--hop-font-body)`、`var(--hop-font-serif)` 和 `var(--hop-font-mono)`。 |
 | `<x-hop::float />` | `mode`：`fixed`（默认）或 `section` | 浮动的 HOP 方块，由 hel.ink 的 `hop-float.js` 绘制。`section` 会填满一个 `position: relative` 的容器。 |
+| `<x-hop::ui />` | 无 | 在布局中放一次，位于字体之后：hel.ink 的 `hop-ui.js` 与 `hop-ui.css`。`HopUI.alert`、`HopUI.confirm`、`HopUI.prompt` 取代浏览器自带的对话框（Promise、键盘优先、九种语言、红色按钮会写明要删除的对象）；`[data-hop-remind]` 卡片会得到“隐藏 · 下周再次显示”按钮，把键发送到 `data-hop-remind-url`。 |
 | `<x-hop::family />` | `current`、`title`、`intro` | 一个区块，列出每个公开应用及其标志和标语。当前应用会被标记，且不带链接。 |
 | `<x-hop::back />` | `href`（默认：应用首页）、`label` | 内页使用的返回链接。 |
 | `<x-hop::badge />` | 插槽 | 一个链接到 hub 的小胶囊。除非你提供其他文字，否则显示 `a HOP app`。 |

@@ -10,6 +10,7 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ### Added
 
+- `<x-hop::ui />`: hel.ink's `hop-ui.js` and `hop-ui.css` (hop-assets v5), the shared dialogs `HopUI.alert`, `HopUI.confirm` and `HopUI.prompt` that replace the browser's own, and the "Hide · Shows again next week" button on `[data-hop-remind]` reminder cards. The bundled fallback manifest is the hub's v5 manifest (v4 plus the two files).
 - FileHop (file.hel.ink) in the bundled fallback manifest, so the family menus, switcher and footer list it even when hel.ink cannot be reached.
 - The bundled manifest is the hub's hop-assets v3 manifest, unchanged (fonts, tiles with FileHop's, marks and SRI hashes); the docs page loads the fonts from v3.
 - A `file` icon for FileHop's menu entry, the same as the hub's copy of this package.
