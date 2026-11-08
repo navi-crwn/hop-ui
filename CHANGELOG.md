@@ -6,6 +6,7 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ### Added
 
+- FileHop (file.hel.ink) in the bundled fallback manifest, so the family menus, switcher and footer list it even when hel.ink cannot be reached. Its mark is `v2/apps/filehop/mark.svg`, a file added to hop-assets after v1 was frozen.
 - `<x-hop::family-nav />`, the "HOP family" block for a dashboard sidebar (HOP ID first, then the other public apps with their marks, the current app left out), and `<x-hop::account-menu />`, the top bar menu with name, email, HOP ID, settings and sign out. The family dashboard layout keeps the primary action, language, theme and account menu in the top bar and the app list in the sidebar.
 - `Hop\Ui\Locales`, the one list of nine languages: `en`, `zh-CN`, `de`, `id`, `ja`, `pt-BR`, `es`, `fr` and `ru`. `normalize()` maps the older `zh` and `pt` to `zh-CN` and `pt-BR`, and anything else, such as the retired `ar`, to English.
 - `<x-hop::language-switcher />`, showing each language by its native name and a short code, and `<x-hop::app-switcher />`, an accessible dropdown of the family apps. Both close on Escape and move with the arrow keys.

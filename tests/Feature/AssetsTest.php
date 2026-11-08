@@ -7,7 +7,7 @@ test('the bundled manifest lists the public HOP apps with their marks', function
     $family = Assets::family('linkhop');
     $slugs = array_column($family, 'slug');
 
-    expect($slugs)->toContain('hub', 'linkhop', 'biohop', 'pixelhop', 'notehop')->not->toContain('imperium');
+    expect($slugs)->toContain('hub', 'linkhop', 'biohop', 'pixelhop', 'notehop', 'filehop')->not->toContain('imperium');
     expect(collect($family)->firstWhere('slug', 'linkhop')['current'])->toBeTrue();
     foreach ($family as $app) {
         expect($app['icons']['mark']['url'])->toStartWith('https://hel.ink/hop-assets/')
