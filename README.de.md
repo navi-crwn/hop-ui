@@ -82,6 +82,7 @@ Das Paket liefert keine Übersetzungen mit. Die Strings, die es durch `__()` gib
 | --- | --- | --- |
 | `<x-hop::fonts />` | keine | In `<head>`: die Typografie der Familie (Inter, Instrument Serif und JetBrains Mono) von hel.ink. Nutze `var(--hop-font-display)`, `var(--hop-font-body)`, `var(--hop-font-serif)` und `var(--hop-font-mono)`. |
 | `<x-hop::float />` | `mode`: `fixed` (Standard) oder `section` | Die schwebenden HOP-Kacheln, gezeichnet von `hop-float.js` auf hel.ink. `section` füllt eine Box mit `position: relative`. |
+| `<x-hop::ui />` | keine | Einmal im Layout, nach den Schriften: `hop-ui.js` und `hop-ui.css` von hel.ink. `HopUI.alert`, `HopUI.confirm` und `HopUI.prompt` ersetzen die Dialoge des Browsers (Promises, Tastatur zuerst, neun Sprachen, ein roter Button, der nennt, was gelöscht wird); `[data-hop-remind]`-Karten bekommen einen Button „Ausblenden · Erscheint nächste Woche wieder“, der den Schlüssel an `data-hop-remind-url` sendet. |
 | `<x-hop::family />` | `current`, `title`, `intro` | Ein Abschnitt, der jede öffentliche App mit ihrem Zeichen und ihrem Slogan auflistet. Die aktuelle App ist markiert und nicht verlinkt. |
 | `<x-hop::back />` | `href` (Standard: die Startseite der App), `label` | Ein Zurück-Link für Unterseiten. |
 | `<x-hop::badge />` | Slot | Eine kleine Pille, die auf den Hub verlinkt. Sie zeigt `a HOP app`, außer du gibst ihr einen anderen Text. |

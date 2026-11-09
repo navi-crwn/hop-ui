@@ -82,6 +82,7 @@ The package ships no translations. The strings it passes through `__()` (such as
 | --- | --- | --- |
 | `<x-hop::fonts />` | none | In `<head>`: the family typography (Inter, Instrument Serif and JetBrains Mono) from hel.ink. Use `var(--hop-font-display)`, `var(--hop-font-body)`, `var(--hop-font-serif)` and `var(--hop-font-mono)`. |
 | `<x-hop::float />` | `mode`: `fixed` (default) or `section` | The floating HOP tiles, drawn by hel.ink's `hop-float.js`. `section` fills a `position: relative` box. |
+| `<x-hop::ui />` | none | Once in the layout, after the fonts: hel.ink's `hop-ui.js` and `hop-ui.css`. `HopUI.alert`, `HopUI.confirm` and `HopUI.prompt` replace the browser's own dialogs (Promises, keyboard first, nine languages, a red button that names what is deleted); `[data-hop-remind]` cards get a "Hide · Shows again next week" button that posts the key to `data-hop-remind-url`. |
 | `<x-hop::family />` | `current`, `title`, `intro` | A section listing every public app with its mark and tagline. The current app is marked and not linked. |
 | `<x-hop::back />` | `href` (default: the app's home), `label` | A back link for inner pages. |
 | `<x-hop::badge />` | slot | A small pill linking to the hub. It reads `a HOP app` unless you give it other text. |

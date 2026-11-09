@@ -82,6 +82,7 @@ return [
 | --- | --- | --- |
 | `<x-hop::fonts />` | なし | `<head>` 内に置きます。hel.ink からファミリーのタイポグラフィ（Inter、Instrument Serif、JetBrains Mono）を読み込みます。`var(--hop-font-display)`、`var(--hop-font-body)`、`var(--hop-font-serif)`、`var(--hop-font-mono)` を使います。 |
 | `<x-hop::float />` | `mode`：`fixed`（既定）または `section` | hel.ink の `hop-float.js` が描くフローティング HOP タイル。`section` は `position: relative` のボックスを埋めます。 |
+| `<x-hop::ui />` | なし | レイアウトにフォントの後で一度だけ: hel.ink の `hop-ui.js` と `hop-ui.css`。`HopUI.alert`、`HopUI.confirm`、`HopUI.prompt` がブラウザ標準のダイアログに代わります（Promise、キーボード優先、9 言語、削除対象の名前を示す赤いボタン）。`[data-hop-remind]` のカードには「非表示 · 来週また表示されます」ボタンが付き、キーを `data-hop-remind-url` に送ります。 |
 | `<x-hop::family />` | `current`、`title`、`intro` | 公開されているすべてのアプリを、マークとキャッチコピー付きで並べるセクション。現在のアプリには印が付き、リンクはありません。 |
 | `<x-hop::back />` | `href`（既定：アプリのホーム）、`label` | 下層ページ用の戻るリンク。 |
 | `<x-hop::badge />` | スロット | ハブへリンクする小さなピル。別のテキストを渡さない限り `a HOP app` と表示します。 |

@@ -82,6 +82,7 @@ return [
 | --- | --- | --- |
 | `<x-hop::fonts />` | нет | В `<head>`: типографика семейства (Inter, Instrument Serif и JetBrains Mono) с hel.ink. Используйте `var(--hop-font-display)`, `var(--hop-font-body)`, `var(--hop-font-serif)` и `var(--hop-font-mono)`. |
 | `<x-hop::float />` | `mode`: `fixed` (по умолчанию) или `section` | Плавающие плитки HOP, которые рисует `hop-float.js` с hel.ink. `section` заполняет блок с `position: relative`. |
+| `<x-hop::ui />` | нет | Один раз в макете, после шрифтов: `hop-ui.js` и `hop-ui.css` с hel.ink. `HopUI.alert`, `HopUI.confirm` и `HopUI.prompt` заменяют диалоги браузера (Promise, сначала клавиатура, девять языков, красная кнопка с названием того, что удаляется); карточки `[data-hop-remind]` получают кнопку «Скрыть · Появится снова через неделю», которая отправляет ключ на `data-hop-remind-url`. |
 | `<x-hop::family />` | `current`, `title`, `intro` | Раздел со списком всех публичных приложений с их знаками и слоганами. Текущее приложение отмечено и не является ссылкой. |
 | `<x-hop::back />` | `href` (по умолчанию: главная страница приложения), `label` | Ссылка «назад» для внутренних страниц. |
 | `<x-hop::badge />` | слот | Небольшая плашка со ссылкой на хаб. Показывает `a HOP app`, если не передать другой текст. |

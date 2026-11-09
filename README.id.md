@@ -82,6 +82,7 @@ Paket ini tidak membawa terjemahan. String yang dilewatkannya ke `__()` (seperti
 | --- | --- | --- |
 | `<x-hop::fonts />` | tidak ada | Di `<head>`: tipografi keluarga (Inter, Instrument Serif, dan JetBrains Mono) dari hel.ink. Gunakan `var(--hop-font-display)`, `var(--hop-font-body)`, `var(--hop-font-serif)`, dan `var(--hop-font-mono)`. |
 | `<x-hop::float />` | `mode`: `fixed` (bawaan) atau `section` | Ubin HOP melayang, digambar oleh `hop-float.js` dari hel.ink. `section` mengisi kotak `position: relative`. |
+| `<x-hop::ui />` | tidak ada | Sekali di layout, setelah font: `hop-ui.js` dan `hop-ui.css` dari hel.ink. `HopUI.alert`, `HopUI.confirm`, dan `HopUI.prompt` menggantikan dialog bawaan browser (Promise, utamakan keyboard, sembilan bahasa, tombol merah yang menyebut nama yang dihapus); kartu `[data-hop-remind]` mendapat tombol "Sembunyikan · Muncul lagi minggu depan" yang mengirim kuncinya ke `data-hop-remind-url`. |
 | `<x-hop::family />` | `current`, `title`, `intro` | Bagian yang mencantumkan setiap aplikasi publik dengan tanda dan taglinenya. Aplikasi saat ini ditandai dan tidak ditautkan. |
 | `<x-hop::back />` | `href` (bawaan: beranda aplikasi), `label` | Tautan kembali untuk halaman dalam. |
 | `<x-hop::badge />` | slot | Pil kecil yang menaut ke hub. Isinya `a HOP app` kecuali Anda memberinya teks lain. |
