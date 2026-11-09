@@ -92,7 +92,7 @@ O pacote não traz traduções. As strings que ele passa por `__()` (como `HOP F
 | `<x-hop::app-switcher />` | `app` | Um menu suspenso com todos os apps públicos. O atual tem `aria-current`. |
 | `<x-hop::language-switcher />` | nenhuma | Um menu suspenso com os nove idiomas. Escolher um adiciona `?lang=<code>` à URL atual. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | Um menu suspenso com a inicial, o nome e o e-mail da pessoa, e links para o HOP ID, para as configurações e para um formulário de saída. Um link ou o formulário fica de fora quando a URL dele não é informada. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url`, `languages` | O rodapé em colunas: os links do app, suporte, políticas, a lista da família HOP e uma linha de idiomas. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | O rodapé em colunas: os links do app, suporte, políticas, e a lista da família HOP. |
 
 O layout de painel usado pela família coloca a ação principal, o menu de idioma, o botão de tema e o menu de conta na barra superior, e `family-nav` na barra lateral. O rodapé aponta para `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms` e `/privacy` no próprio domínio do app, então o app precisa servir esses caminhos.
 

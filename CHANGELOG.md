@@ -4,6 +4,10 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Removed
+
+- The footer's language row and its `languages` prop: the language menu in the top bar is the one place to switch language. The copyright line stays, right-aligned on desktop and centred on phones.
+
 ### Changed
 
 - The bundled fallback manifest is the hub's hop-assets v4 manifest: FileHop's mark is now a pixel mark like NoteHop's and PixelHop's (a document with a folded corner and a white arrow down), with PNG icons including an Apple touch icon. Nothing else changed from v3.

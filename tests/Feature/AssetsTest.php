@@ -55,6 +55,7 @@ test('the uniform footer component renders 4 columns including the HOP family', 
         ->toContain('Support')
         ->toContain('Policies')
         ->toContain('HOP Family')
+        ->not->toContain('hreflang=')
         ->toContain('href="https://note.hel.ink"')
         ->toContain('href="https://bio.hel.ink"')
         ->toContain('href="https://pixel.hel.ink"')
