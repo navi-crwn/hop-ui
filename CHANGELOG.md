@@ -4,6 +4,10 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Added
+
+- The footer component shows the family row as the first row inside the footer, for everyone and in both looks: the HOP ID mark and "Part of Hop Easy Link" (linking to hel.ink). "Part of" is translated in all nine languages; the name stays in English.
+
 ### Removed
 
 - The footer's language row and its `languages` prop: the language menu in the top bar is the one place to switch language. The copyright line stays, right-aligned on desktop and centred on phones.
