@@ -92,7 +92,7 @@ return [
 | `<x-hop::app-switcher />` | `app` | 公開されているすべてのアプリのドロップダウン。現在のアプリには `aria-current` が付きます。 |
 | `<x-hop::language-switcher />` | なし | 9 つの言語のドロップダウン。言語を選ぶと、現在の URL に `?lang=<code>` を追加します。 |
 | `<x-hop::account-menu />` | `user`、`settings-url`、`account-url`、`logout-url` | 利用者のイニシャル、名前、メールアドレスと、HOP ID・設定へのリンク、サインアウト用フォームを表示するドロップダウン。URL が渡されていないリンクやフォームは表示されません。 |
-| `<x-hop::footer />` | `app`、`name`、`repo`、`features-url`、`status-url`、`abuse-url`、`languages` | 段組みのフッター：アプリのリンク、サポート、ポリシー、HOP ファミリーのリスト、言語の行。 |
+| `<x-hop::footer />` | `app`、`name`、`repo`、`features-url`、`status-url`、`abuse-url` | 段組みのフッター：アプリのリンク、サポート、ポリシー、HOP ファミリーのリスト。 |
 
 ファミリーで使うダッシュボードのレイアウトでは、主要アクション、言語メニュー、テーマ切り替え、アカウントメニューをトップバーに、`family-nav` をサイドバーに置きます。フッターはアプリ自身のドメインの `/about`、`/changelog`、`/help`、`/faq`、`/contact`、`/terms`、`/privacy` にリンクするため、アプリはこれらのパスを提供する必要があります。
 

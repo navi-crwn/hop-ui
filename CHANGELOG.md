@@ -4,9 +4,17 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Added
+
+- The footer component shows the family row as the first row inside the footer, for everyone and in both looks: the HOP ID mark and "Part of Hop Easy Link" (linking to hel.ink). "Part of" is translated in all nine languages; the name stays in English.
+
+### Removed
+
+- The footer's language row and its `languages` prop: the language menu in the top bar is the one place to switch language. The copyright line stays, right-aligned on desktop and centred on phones.
+
 ### Changed
 
-- The bundled fallback manifest is the hub's hop-assets v4 manifest: FileHop's mark is now a pixel mark like NoteHop's and PixelHop's (a document with a folded corner and a white arrow down), with PNG icons including an Apple touch icon. Nothing else changed from v3.
+- The bundled fallback manifest is the hub's hop-assets v6 manifest: LinkHop and BioHop have new pixel marks (8x8 and 9x9) and FileHop keeps its pixel mark with PNG icons. Nothing else changed from v5.
 
 ### Added
 

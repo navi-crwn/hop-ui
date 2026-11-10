@@ -92,7 +92,7 @@ Le paquet ne fournit aucune traduction. Les chaînes qu'il passe par `__()` (com
 | `<x-hop::app-switcher />` | `app` | Un menu déroulant avec toutes les applications publiques. L'application actuelle porte `aria-current`. |
 | `<x-hop::language-switcher />` | aucune | Un menu déroulant avec les neuf langues. En choisir une ajoute `?lang=<code>` à l'URL actuelle. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | Un menu déroulant avec l'initiale, le nom et l'e-mail de la personne, et des liens vers HOP ID, les paramètres et un formulaire de déconnexion. Un lien ou le formulaire est omis quand son URL n'est pas fournie. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url`, `languages` | Le pied de page en colonnes : les liens de l'application, l'assistance, les politiques, la liste de la famille HOP et une ligne de langues. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | Le pied de page en colonnes : les liens de l'application, l'assistance, les politiques, et la liste de la famille HOP. |
 
 La mise en page de tableau de bord de la famille place l'action principale, le menu de langue, le bouton de thème et le menu de compte dans la barre supérieure, et `family-nav` dans la barre latérale. Le pied de page renvoie vers `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms` et `/privacy` sur le domaine de l'application : l'application doit donc servir ces chemins.
 

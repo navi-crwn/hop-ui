@@ -92,7 +92,7 @@ Das Paket liefert keine Übersetzungen mit. Die Strings, die es durch `__()` gib
 | `<x-hop::app-switcher />` | `app` | Ein Dropdown mit jeder öffentlichen App. Die aktuelle hat `aria-current`. |
 | `<x-hop::language-switcher />` | keine | Ein Dropdown mit den neun Sprachen. Die Auswahl hängt `?lang=<code>` an die aktuelle URL an. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | Ein Dropdown mit Initiale, Name und E-Mail der Person sowie Links zu HOP ID, zu den Einstellungen und einem Abmeldeformular. Ein Link oder das Formular fehlt, wenn seine URL nicht angegeben ist. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url`, `languages` | Die Fußzeile in Spalten: die Links der App, Support, Richtlinien, die Liste der HOP-Familie und eine Sprachzeile. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | Die Fußzeile in Spalten: die Links der App, Support, Richtlinien, und die Liste der HOP-Familie. |
 
 Das Dashboard-Layout der Familie setzt die Hauptaktion, das Sprachmenü, den Theme-Schalter und das Kontomenü in die obere Leiste und `family-nav` in die Seitenleiste. Die Fußzeile verlinkt auf `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms` und `/privacy` auf der eigenen Domain der App. Die App muss diese Pfade also bereitstellen.
 
