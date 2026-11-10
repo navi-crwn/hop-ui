@@ -8,7 +8,7 @@ test('the bundled manifest lists the public HOP apps with their marks', function
     $family = Assets::family('linkhop');
     $slugs = array_column($family, 'slug');
 
-    expect($slugs)->toContain('hub', 'linkhop', 'biohop', 'pixelhop', 'notehop', 'filehop')->not->toContain('imperium');
+    expect($slugs)->toContain('hub', 'linkhop', 'biohop', 'pixelhop', 'notehop', 'filehop', 'payhop')->not->toContain('imperium');
     expect(collect($family)->firstWhere('slug', 'linkhop')['current'])->toBeTrue();
     foreach ($family as $app) {
         expect($app['icons']['mark']['url'])->toStartWith('https://hel.ink/hop-assets/')
@@ -19,8 +19,8 @@ test('the bundled manifest lists the public HOP apps with their marks', function
 test('fonts and floating tiles load from hel.ink with SRI', function () {
     $html = Blade::render('<x-hop::fonts /><x-hop::float mode="section" />');
 
-    expect($html)->toContain('https://hel.ink/hop-assets/v8/fonts-amnesia.css')
-        ->toContain('https://hel.ink/hop-assets/v8/hop-float.js')
+    expect($html)->toContain('https://hel.ink/hop-assets/v9/fonts-amnesia.css')
+        ->toContain('https://hel.ink/hop-assets/v9/hop-float.js')
         ->toContain('integrity="sha384-')
         ->toContain('crossorigin="anonymous"')
         ->toContain('data-hop-float="section"');
@@ -29,8 +29,8 @@ test('fonts and floating tiles load from hel.ink with SRI', function () {
 test('the dialogs and reminder cards load from hel.ink with SRI', function () {
     $html = Blade::render('<x-hop::ui />');
 
-    expect($html)->toContain('https://hel.ink/hop-assets/v8/hop-ui.css')
-        ->toContain('https://hel.ink/hop-assets/v8/hop-ui.js')
+    expect($html)->toContain('https://hel.ink/hop-assets/v9/hop-ui.css')
+        ->toContain('https://hel.ink/hop-assets/v9/hop-ui.js')
         ->toContain('integrity="sha384-')
         ->toContain('crossorigin="anonymous"');
 });
@@ -63,6 +63,19 @@ test('the uniform footer component renders 4 columns including the HOP family', 
         ->toContain('href="https://pixel.hel.ink"')
         ->toContain('aria-current="page"')
         ->toContain('Open source under MIT License');
+});
+
+test('the family list is exactly the public apps of the bundled manifest', function () {
+    $manifest = json_decode(file_get_contents(dirname(__DIR__, 2).'/resources/hop-assets/apps.json'), true);
+    $public = array_values(array_map(fn ($a) => $a['slug'], array_filter($manifest['apps'], fn ($a) => $a['public'] ?? false)));
+
+    expect($manifest['version'])->toBe('v9')
+        ->and(array_column(Assets::family(), 'slug'))->toBe($public);
+});
+
+test('PayHop has its own menu icon', function () {
+    expect(Apps::ICONS)->toHaveKey('pay');
+    expect(Apps::icon('pay'))->not->toBe(Apps::icon('file'))->not->toBe(Apps::icon('globe'));
 });
 
 test('FileHop has its own menu icon', function () {
