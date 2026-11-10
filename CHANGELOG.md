@@ -14,7 +14,7 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ### Changed
 
-- The bundled fallback manifest is the hub's hop-assets v4 manifest: FileHop's mark is now a pixel mark like NoteHop's and PixelHop's (a document with a folded corner and a white arrow down), with PNG icons including an Apple touch icon. Nothing else changed from v3.
+- The bundled fallback manifest is the hub's hop-assets v6 manifest: LinkHop and BioHop have new pixel marks (8x8 and 9x9) and FileHop keeps its pixel mark with PNG icons. Nothing else changed from v5.
 
 ### Added
 
