@@ -5,6 +5,7 @@ namespace Hop\Ui;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Vite;
 
 /**
  * The HOP family asset manifest (https://hel.ink/hop-assets/apps.json): fonts,
@@ -72,6 +73,6 @@ final class Assets
     /** The CSP nonce Vite uses, when the app sets one. */
     public static function nonce(): ?string
     {
-        return class_exists(\Illuminate\Support\Facades\Vite::class) ? \Illuminate\Support\Facades\Vite::cspNonce() : null;
+        return class_exists(Vite::class) ? Vite::cspNonce() : null;
     }
 }
