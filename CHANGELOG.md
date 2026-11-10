@@ -8,6 +8,7 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 - The bundled fallback manifest is the hub's hop-assets v8 manifest (copied unchanged from HEL.ink `public/hop-assets/apps.json`); the asset URL tests expect v8.
 - `<x-hop::footer />` accepts an optional `brand` slot, rendered in place of the family row when given, and a deprecated, ignored `languages` prop. `Assets` imports `Vite` instead of using its full class name. These match the hub's copy of this package; nothing else changes without a `brand` slot.
+- `NavTest` and `ChromeTest` set their own `hop.*` config instead of relying on the hub app's, and the hub-layout test is dropped (it needed the hub's `User` model and routes). The package tests run inside a host app: the hub's `php8.3 vendor/bin/pest packages/ui/tests`.
 
 ## [0.3.0] - 2026-11-10
 

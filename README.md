@@ -92,7 +92,7 @@ The package ships no translations. The strings it passes through `__()` (such as
 | `<x-hop::app-switcher />` | `app` | A dropdown with every public app. The current one has `aria-current`. |
 | `<x-hop::language-switcher />` | none | A dropdown with the nine languages. Choosing one adds `?lang=<code>` to the current URL. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | A dropdown with the person's initial, name and email, and links for HOP ID, settings and a sign-out form. A link or the form is left out when its URL is not given. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | The columnar footer: the app's links, support, policies, and the HOP family list. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | The columnar footer: the app's links, support, policies, and the HOP family list. An optional `brand` slot replaces the "Part of Hop Easy Link" row at the top. The `languages` prop is deprecated and ignored (the language menu lives in the top bar). |
 
 The dashboard layout the family uses puts the primary action, the language menu, the theme toggle and the account menu in the top bar, and `family-nav` in the sidebar. The footer links to `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms` and `/privacy` on the app's own domain, so the app has to serve those paths.
 

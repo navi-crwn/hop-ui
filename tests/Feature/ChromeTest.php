@@ -13,6 +13,9 @@ test('the family nav lists HOP ID and every other public app with its mark, not 
 });
 
 test('an app this one has no SSO start for opens through the hub launcher, never by its bare address', function () {
+    config()->set('hop.current', 'biohop');
+    config()->set('hop.hub_url', 'https://hub.hel.ink');
+    config()->set('hop.apps', ['linkhop' => ['url' => 'https://link.hel.ink', 'start' => '/auth/helink']]);
     $html = Blade::render('<x-hop::family-nav app="biohop" />');
     expect($html)->toContain('href="https://hub.hel.ink/apps/filehop"')
         ->and($html)->not->toContain('href="https://file.hel.ink"')
