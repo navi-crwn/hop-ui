@@ -92,7 +92,7 @@ El paquete no incluye traducciones. Las cadenas que pasa por `__()` (como `HOP F
 | `<x-hop::app-switcher />` | `app` | Un desplegable con todas las apps públicas. La actual tiene `aria-current`. |
 | `<x-hop::language-switcher />` | ninguna | Un desplegable con los nueve idiomas. Al elegir uno se añade `?lang=<code>` a la URL actual. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | Un desplegable con la inicial, el nombre y el correo de la persona, y enlaces a HOP ID, a los ajustes y a un formulario para cerrar sesión. Un enlace o el formulario se omite cuando no se da su URL. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url`, `languages` | El pie de página en columnas: los enlaces de la app, soporte, políticas, la lista de la familia HOP y una fila de idiomas. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | El pie de página en columnas: los enlaces de la app, soporte, políticas, y la lista de la familia HOP. |
 
 El diseño de panel que usa la familia pone la acción principal, el menú de idioma, el selector de tema y el menú de cuenta en la barra superior, y `family-nav` en la barra lateral. El pie de página enlaza a `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms` y `/privacy` en el propio dominio de la app, así que la app tiene que servir esas rutas.
 

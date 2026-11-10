@@ -92,7 +92,7 @@ return [
 | `<x-hop::app-switcher />` | `app` | 包含每个公开应用的下拉菜单。当前应用带有 `aria-current`。 |
 | `<x-hop::language-switcher />` | 无 | 包含九种语言的下拉菜单。选择一种语言会在当前 URL 上添加 `?lang=<code>`。 |
 | `<x-hop::account-menu />` | `user`、`settings-url`、`account-url`、`logout-url` | 显示用户首字母、姓名和邮箱的下拉菜单，并带有 HOP ID 链接、设置链接和退出登录表单。未提供对应 URL 时，该链接或表单会被省略。 |
-| `<x-hop::footer />` | `app`、`name`、`repo`、`features-url`、`status-url`、`abuse-url`、`languages` | 分栏页脚：应用的链接、支持、政策、HOP 家族列表和一行语言选项。 |
+| `<x-hop::footer />` | `app`、`name`、`repo`、`features-url`、`status-url`、`abuse-url` | 分栏页脚：应用的链接、支持、政策和 HOP 家族列表。 |
 
 家族使用的仪表板布局把主要操作、语言菜单、主题切换和账户菜单放在顶栏，把 `family-nav` 放在侧边栏。页脚链接到应用自己域名下的 `/about`、`/changelog`、`/help`、`/faq`、`/contact`、`/terms` 和 `/privacy`，因此应用必须提供这些路径。
 

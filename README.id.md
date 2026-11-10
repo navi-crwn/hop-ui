@@ -92,7 +92,7 @@ Paket ini tidak membawa terjemahan. String yang dilewatkannya ke `__()` (seperti
 | `<x-hop::app-switcher />` | `app` | Dropdown berisi setiap aplikasi publik. Aplikasi saat ini memiliki `aria-current`. |
 | `<x-hop::language-switcher />` | tidak ada | Dropdown berisi sembilan bahasa. Memilih salah satunya menambahkan `?lang=<code>` ke URL saat ini. |
 | `<x-hop::account-menu />` | `user`, `settings-url`, `account-url`, `logout-url` | Dropdown berisi inisial, nama, dan email pengguna, serta tautan ke HOP ID, pengaturan, dan formulir keluar. Tautan atau formulir dihilangkan bila URL-nya tidak diberikan. |
-| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url`, `languages` | Footer berkolom: tautan aplikasi, dukungan, kebijakan, daftar keluarga HOP, dan baris bahasa. |
+| `<x-hop::footer />` | `app`, `name`, `repo`, `features-url`, `status-url`, `abuse-url` | Footer berkolom: tautan aplikasi, dukungan, kebijakan, dan daftar keluarga HOP. |
 
 Tata letak dasbor yang dipakai keluarga ini menaruh aksi utama, menu bahasa, tombol tema, dan menu akun di bilah atas, dan `family-nav` di sidebar. Footer menaut ke `/about`, `/changelog`, `/help`, `/faq`, `/contact`, `/terms`, dan `/privacy` di domain aplikasi itu sendiri, jadi aplikasi harus melayani path tersebut.
 
