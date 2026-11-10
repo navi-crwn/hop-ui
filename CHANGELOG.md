@@ -4,6 +4,8 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-11
+
 ### Added
 
 - PayHop (pay.hel.ink) in the bundled fallback manifest and the family menus, switcher and footer, and a `pay` menu icon (`Apps::ICONS`) for it.
