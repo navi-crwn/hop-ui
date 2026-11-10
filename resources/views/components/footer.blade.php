@@ -6,6 +6,7 @@
     'featuresUrl' => '/features',
     'statusUrl' => '/status',
     'abuseUrl' => 'https://link.hel.ink/report-abuse',
+    'languages' => false, // deprecated, ignored: the language menu lives in the top bar
 ])
 @php
     $family = \Hop\Ui\Assets::family($app);
@@ -13,11 +14,15 @@
 @endphp
 <footer {{ $attributes->merge(['class' => 'hop-footer border-t border-slate-200/80 bg-slate-50/50 py-12 text-sm dark:border-white/10 dark:bg-slate-950/40']) }}>
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        {{-- Family row, first inside the footer: HOP ID mark + "Part of Hop Easy Link", for everyone. --}}
-        <a href="https://hel.ink" class="mb-8 flex w-fit items-center gap-2.5 text-[13px] text-slate-500 dark:text-slate-400">
-            @if ($hopMark)<img src="{{ $hopMark }}" alt="" width="20" height="20" class="h-5 w-5 rounded">@endif
-            <span>{!! __('Part of :name', ['name' => '<b class="font-medium text-slate-900 dark:text-white">Hop Easy Link</b>']) !!}</span>
-        </a>
+        @isset($brand)
+            <div class="hop-footer-brand mb-8">{{ $brand }}</div>
+        @else
+            {{-- Family row, first inside the footer: HOP ID mark + "Part of Hop Easy Link", for everyone. --}}
+            <a href="https://hel.ink" class="mb-8 flex w-fit items-center gap-2.5 text-[13px] text-slate-500 dark:text-slate-400">
+                @if ($hopMark)<img src="{{ $hopMark }}" alt="" width="20" height="20" class="h-5 w-5 rounded">@endif
+                <span>{!! __('Part of :name', ['name' => '<b class="font-medium text-slate-900 dark:text-white">Hop Easy Link</b>']) !!}</span>
+            </a>
+        @endisset
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
             {{-- Column 1: App --}}
             <div class="space-y-3">

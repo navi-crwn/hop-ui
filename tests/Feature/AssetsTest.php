@@ -19,8 +19,8 @@ test('the bundled manifest lists the public HOP apps with their marks', function
 test('fonts and floating tiles load from hel.ink with SRI', function () {
     $html = Blade::render('<x-hop::fonts /><x-hop::float mode="section" />');
 
-    expect($html)->toContain('https://hel.ink/hop-assets/v6/fonts-amnesia.css')
-        ->toContain('https://hel.ink/hop-assets/v6/hop-float.js')
+    expect($html)->toContain('https://hel.ink/hop-assets/v8/fonts-amnesia.css')
+        ->toContain('https://hel.ink/hop-assets/v8/hop-float.js')
         ->toContain('integrity="sha384-')
         ->toContain('crossorigin="anonymous"')
         ->toContain('data-hop-float="section"');
@@ -29,8 +29,8 @@ test('fonts and floating tiles load from hel.ink with SRI', function () {
 test('the dialogs and reminder cards load from hel.ink with SRI', function () {
     $html = Blade::render('<x-hop::ui />');
 
-    expect($html)->toContain('https://hel.ink/hop-assets/v6/hop-ui.css')
-        ->toContain('https://hel.ink/hop-assets/v6/hop-ui.js')
+    expect($html)->toContain('https://hel.ink/hop-assets/v8/hop-ui.css')
+        ->toContain('https://hel.ink/hop-assets/v8/hop-ui.js')
         ->toContain('integrity="sha384-')
         ->toContain('crossorigin="anonymous"');
 });
@@ -68,4 +68,10 @@ test('the uniform footer component renders 4 columns including the HOP family', 
 test('FileHop has its own menu icon', function () {
     expect(Apps::ICONS)->toHaveKey('file');
     expect(Apps::icon('file'))->not->toBe(Apps::icon('note'))->not->toBe(Apps::icon('globe'));
+});
+
+test('the footer shows a brand slot instead of the family row when one is given', function () {
+    $html = Blade::render('<x-hop::footer app="hub" name="HEL.ink"><x-slot:brand><span>Custom brand</span></x-slot:brand></x-hop::footer>');
+
+    expect($html)->toContain('hop-footer-brand')->toContain('Custom brand')->not->toContain('Part of');
 });
