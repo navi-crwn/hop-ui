@@ -8,7 +8,7 @@ The shared Blade components and family data for the Laravel apps of the HOP fami
 
 These come from the BioHop dashboard and home page, run locally with a demo account, using this package at `main`.
 
-![The BioHop sidebar with the HOP family list: HOP ID, LinkHop, PixelHop and NoteHop, each with its mark. BioHop itself is not listed.](docs/images/family-nav.png)
+![The BioHop sidebar with the HOP family list: HOP ID, LinkHop, PixelHop, NoteHop and FileHop, each with its mark. BioHop itself is not listed.](docs/images/family-nav.png)
 
 ![The language menu in the top bar, open: nine languages with the native name on the left and a short code on the right.](docs/images/language-switcher.png)
 
