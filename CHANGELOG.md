@@ -4,9 +4,18 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-11
+
+### Added
+
+- PayHop (pay.hel.ink) in the bundled fallback manifest and the family menus, switcher and footer, and a `pay` menu icon (`Apps::ICONS`) for it.
+- `scripts/check-hop-family.sh` accepts `--ref <branch|sha>` (or `HOP_FAMILY_REF`) to compare against another HEL.ink ref, and `--from <file>` (or `HOP_FAMILY_FILE`) to compare against a local copy of `docs/hop-family.md`. Without them it behaves as before (HEL.ink `main`). The script is byte-identical in every HOP repository.
+- A test that the family list equals the public apps of the bundled manifest, so adding an app to the manifest needs no test edit.
+
 ### Changed
 
-- The bundled fallback manifest is the hub's hop-assets v8 manifest (copied unchanged from HEL.ink `public/hop-assets/apps.json`); the asset URL tests expect v8.
+- The bundled fallback manifest is the hub's hop-assets v9 manifest (copied unchanged from HEL.ink `public/hop-assets/apps.json`); the asset URL tests expect v9. The docs page loads its fonts from v9 and lists PayHop.
+- The family table in all nine READMEs lists PayHop.
 - `<x-hop::footer />` accepts an optional `brand` slot, rendered in place of the family row when given, and a deprecated, ignored `languages` prop. `Assets` imports `Vite` instead of using its full class name. These match the hub's copy of this package; nothing else changes without a `brand` slot.
 - `NavTest` and `ChromeTest` set their own `hop.*` config instead of relying on the hub app's, and the hub-layout test is dropped (it needed the hub's `User` model and routes). The package tests run inside a host app: the hub's `php8.3 vendor/bin/pest packages/ui/tests`.
 
