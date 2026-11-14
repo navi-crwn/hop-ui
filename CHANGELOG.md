@@ -4,6 +4,10 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Added
+
+- Family menu: the app switcher takes an optional open callback that rewrites where each app leads, so an app can send a signed-in member to the app's dashboard instead of its public page. Without it nothing changes.
+
 ## [0.4.0] - 2026-11-11
 
 ### Added
