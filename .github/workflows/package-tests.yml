@@ -11,6 +11,7 @@ on:
     branches:
       - main
       - ci/run-tests
+      - ci/run-tests
   workflow_dispatch:
     inputs:
       hub_ref:
