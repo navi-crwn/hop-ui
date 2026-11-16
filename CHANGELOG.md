@@ -4,8 +4,11 @@ All notable changes to `hop/ui` are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-11-16
+
 ### Added
 
+- Footer: an app can show a "Feedback" link under Support, right after Help, by giving the footer the address of the hub's feedback form. The link opens the form where people send an idea or report a problem. Without that address the footer looks exactly as before, so apps that do not use it need no change.
 - Family menu: the app switcher takes an optional open callback that rewrites where each app leads, so an app can send a signed-in member to the app's dashboard instead of its public page. Without it nothing changes.
 
 ## [0.4.0] - 2026-11-11
